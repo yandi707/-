@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kuangstudy.mapper.BlogMapper">
+
+<!--    <select id="findByPage" resultType="com.xq.entity.Note">-->
+<!--        SELECT-->
+<!--            q2.id,-->
+<!--            q2.title,-->
+<!--            q2.tags,-->
+<!--            q2.description,-->
+<!--            q2.categoryid,-->
+<!--            q2.gotop,-->
+<!--            q2.views,-->
+<!--            q2.create_time AS createTime,-->
+<!--            q2.update_time AS updateTime,-->
+<!--            q2.`comment`,-->
+<!--            q2.staticlink,-->
+<!--            q2.isdelete,-->
+<!--            q2.htmlcontent,-->
+<!--            q2.categorytitle,-->
+<!--            q2.vip,-->
+<!--            q2.avatar,-->
+<!--            q2.nickname,-->
+<!--            q2.`status`,-->
+<!--            q2.userid,-->
+<!--            q2.img,-->
+<!--            q2.collects-->
+<!--        FROM-->
+<!--            kss_user_note q1-->
+<!--        LEFT JOIN kss_note q2 ON q1.noteid = q2.id-->
+<!--        ${ew.customSqlSegment}-->
+<!--        ORDER BY q1.create_time DESC-->
+<!--    </select>-->
+
+</mapper>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh" class="dark">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no">
+		<meta name="description" content="">
+		<title>${(blog.title)!} - 小文文资讯</title>
+		<link rel="stylesheet" type="text/css" href="/css/detail.css"/>
+		<style>
+			body{background: #212121;}
+		</style>
+	</head>
+	<body>
+	<#include "/common/header.html"/>
+		<div id="root">
+			<div style="width: 100%; height: 100%;">
+				<div class="Content">
+					<div class="news">
+						<div class="container--3p09R">
+							<div class="crumb--1kyPd">
+								<div>
+									<a href="/"><span class="crumb--1kyPd">首页</span></a><span class="crumb--1kyPd"> &gt; </span>
+									<a href="/?cid=${blog.categoryId}"><span class="crumb--1kyPd">${blog.categoryTitle}</span></a>
+								</div>
+							</div>
+							<div class="title--29Jni">${(blog.title)!}</div>
+							<div class="date--1R4eB">${(blog.createTime)?date}</div>
+							<article>
+								${(blog.content)!}
+							</article>
+						</div>
+						<div class="footer--2WLdJ">
+							<div class="footer--2nhzB">
+								<div class="about--3RFFE">
+									<a target="_blank" rel="noopener noreferrer" href="https://www.oceanengine.com/resource/douyin?source=dou">飞哥博客</a>
+									<a target="_blank" rel="noopener noreferrer" href="https://www.douyin.com/agreements/?id=6773906068725565448">YYKK博客</a>
+									<a target="_blank" rel="noopener noreferrer" href="https://www.douyin.com/agreements/?id=6773901168964798477">隐私政策</a>
+								</div>
+								<div class="security--1BtEt">
+									<div>
+										<div>2021 © 资讯 ｜&nbsp;
+										<a target="_blank" rel="noopener noreferrer" href="https://beian.miit.gov.cn">京ICP备1xx3423号-3</a>&nbsp; ｜ 北京微播视界科技有限公司 ｜
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

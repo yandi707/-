@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh" class="dark" t="dark" style="--m-theme-color:0, 0%, 100%; --m-theme-light-0:100%; --m-theme-light-600:24%; --m-theme-light-700:19%; --m-theme-light-800:13%; --m-theme-light-900:3%;">
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <meta name="viewport" content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no" /> 
+  <meta name="description" content="" /> 
+  <title>登录</title> 
+  <link href="/css/chunk.css" rel="stylesheet" />
+  <link href="/css/app.css" rel="stylesheet" />
+  <link href="/css/login.css" rel="stylesheet"/>
+ </head> 
+ <body> 
+  <div outline="0" hidefocus="true" id="app">
+   <span >
+    <div   class="login_container">
+     <div  class="logo_container">
+      <div  class="logo">
+       <a  href="/">
+        <svg   aria-hidden="true" class="svg-icon logo">
+         <use  xlink:href="#master-logo"></use>
+        </svg></a>
+      </div>
+     </div>
+     <div  class="midd">
+      <div   class="login-form">
+       <div   class="h1-wrap">
+        <div   class="title t1 text-white">
+         {{title}}
+        </div>
+        <div   class="desc p3">
+          还没有账号？请先 
+         <a   href="/files/register" class="button-text">注册</a>
+        </div>
+       </div>
+       <div   class="login-form-wrap">
+        <div data-v-7f5e281c=""  class="container" >
+         <!---->
+         <input data-v-7f5e281c="" placeholder="账号" type="text"  v-model="user.account" class="input_init container_error mas-form-input-large" />
+         <div data-v-7f5e281c="" class="slot_content"></div>
+         <div data-v-7f5e281c="" class="error_label" style="color: rgb(224, 95, 66);">
+          <div data-v-7f5e281c="" class="icon">
+           <svg data-v-7f5e281c="" width="1em" height="1em" viewbox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="font-size: 12px; transform: rotate(0deg);">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 7C12.5 10.0376 10.0376 12.5 7 12.5C3.96243 12.5 1.5 10.0376 1.5 7C1.5 3.96243 3.96243 1.5 7 1.5C10.0376 1.5 12.5 3.96243 12.5 7ZM13.5 7C13.5 10.5899 10.5899 13.5 7 13.5C3.41015 13.5 0.5 10.5899 0.5 7C0.5 3.41015 3.41015 0.5 7 0.5C10.5899 0.5 13.5 3.41015 13.5 7ZM6.0995 3.99504C6.04623 3.46229 6.46459 3 7 3C7.53541 3 7.95377 3.46229 7.9005 3.99504L7.54975 7.50248C7.52151 7.78492 7.28384 8 7 8C6.71616 8 6.47849 7.78492 6.45025 7.50249L6.0995 3.99504ZM7 10.9985C6.44706 10.9985 6 10.5554 6 9.99854C6 9.45308 6.44706 8.99854 7 8.99854C7.55294 8.99854 8 9.44172 8 9.99854C8 10.5554 7.55294 10.9985 7 10.9985Z" fill="currentcolor"></path>
+           </svg>
+          </div>
+          <div data-v-7f5e281c="" class="error_message h5">
+           请输入邮箱
+          </div>
+         </div>
+        </div>
+        <div data-v-7f5e281c=""  class="container" >
+         <!---->
+         <input data-v-7f5e281c="" placeholder="密码" id="pwd" type="password" v-model="user.password"  class="input_init container_error mas-form-input-large" />
+         <div data-v-7f5e281c="" class="slot_content"></div>
+         <div data-v-7f5e281c="" class="error_label" style="color: rgb(224, 95, 66);">
+          <div data-v-7f5e281c="" class="icon">
+           <svg data-v-7f5e281c="" width="1em" height="1em" viewbox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="font-size: 12px; transform: rotate(0deg);">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 7C12.5 10.0376 10.0376 12.5 7 12.5C3.96243 12.5 1.5 10.0376 1.5 7C1.5 3.96243 3.96243 1.5 7 1.5C10.0376 1.5 12.5 3.96243 12.5 7ZM13.5 7C13.5 10.5899 10.5899 13.5 7 13.5C3.41015 13.5 0.5 10.5899 0.5 7C0.5 3.41015 3.41015 0.5 7 0.5C10.5899 0.5 13.5 3.41015 13.5 7ZM6.0995 3.99504C6.04623 3.46229 6.46459 3 7 3C7.53541 3 7.95377 3.46229 7.9005 3.99504L7.54975 7.50248C7.52151 7.78492 7.28384 8 7 8C6.71616 8 6.47849 7.78492 6.45025 7.50249L6.0995 3.99504ZM7 10.9985C6.44706 10.9985 6 10.5554 6 9.99854C6 9.45308 6.44706 8.99854 7 8.99854C7.55294 8.99854 8 9.44172 8 9.99854C8 10.5554 7.55294 10.9985 7 10.9985Z" fill="currentcolor"></path>
+           </svg>
+          </div>
+          <div data-v-7f5e281c="" class="error_message h5">
+           请输入密码
+          </div>
+         </div>
+        </div>
+        <button   class="m-button m-button--lg m-button--highlight" @click="toLogin" style="width: 100%; padding: 0px;">
+         <!----> <span  class="m-button__content">登录</span></button> 
+       </div> 
+       <div   class="or h3">
+        <span  >或</span>
+       </div>
+       <button   class="m-button m-button--lg m-button--secondary" style="width: 100%; padding: 0px;">
+        <div  class="m-button__icon">
+         <svg  width="1em" height="1em" viewbox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="font-size: 21px; transform: rotate(0deg);">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.64592 4.9608C9.58513 4.95853 9.52405 4.95716 9.4626 4.95716C7.21177 4.95716 5.38713 6.50431 5.3871 8.41278C5.3871 8.78058 5.45511 9.13488 5.58065 9.46735C5.46688 9.47472 5.3519 9.47846 5.2359 9.47846C4.63412 9.47846 4.06017 9.3774 3.53581 9.19456L2.05171 10.0084L2.4999 8.68638C1.43576 7.98858 0.75 6.89361 0.75 5.6622C0.75 3.55456 2.7584 1.84595 5.23591 1.84595C7.43173 1.84595 9.2588 3.18818 9.64592 4.9608ZM7.44646 4.39493C7.44646 4.02906 7.14987 3.73248 6.78401 3.73248C6.41816 3.73248 6.12157 4.02906 6.12156 4.39493C6.12156 4.7608 6.41814 5.05739 6.78401 5.05739C7.14988 5.05739 7.44646 4.76079 7.44646 4.39493ZM3.03975 4.39492C3.03975 4.76079 3.33634 5.05737 3.7022 5.05737C4.06807 5.05737 4.36465 4.76077 4.36465 4.39492C4.36465 4.02905 4.06807 3.73247 3.7022 3.73247C3.33633 3.73247 3.03975 4.02906 3.03975 4.39492ZM9.46284 5.20125C11.5546 5.20125 13.2503 6.63905 13.2503 8.41268C13.2503 9.50119 12.6115 10.4631 11.6345 11.0439L12.0109 12.154L10.7159 11.4439C10.3237 11.5605 9.90206 11.6241 9.46286 11.6241C7.37109 11.6241 5.67539 10.1863 5.67539 8.41268C5.67539 6.63905 7.37107 5.20125 9.46284 5.20125ZM7.74914 7.42146C7.74914 7.71439 7.9866 7.95185 8.27952 7.95185C8.57245 7.95185 8.80991 7.71439 8.80991 7.42146C8.80991 7.12853 8.57245 6.89108 8.27952 6.89108C7.9866 6.89108 7.74914 7.12853 7.74914 7.42146ZM10.2166 7.42146C10.2166 7.71439 10.4541 7.95185 10.747 7.95185C11.0399 7.95185 11.2774 7.71439 11.2774 7.42146C11.2774 7.12853 11.0399 6.89108 10.747 6.89108C10.4541 6.89108 10.2166 7.12853 10.2166 7.42146Z" fill="currentcolor"></path>
+         </svg>
+        </div> <span  class="m-button__content">微信扫码登录</span></button> 
+       <a   href="/files/forget-password" class="button-text forget_password h3">忘记密码?</a> 
+      </div> 
+     </div> 
+    </div> </span> 
+  </div>
+  <script src="/js/vue.min.js"></script>
+  <script src="/js/axios.min.js"></script>
+  <script src="/js/login/login.js"></script>
+ </body>
+</html>
