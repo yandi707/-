@@ -78,7 +78,7 @@
             <div id="square-item-container" class="square-item-container" style="overflow: hidden">
                 <div v-for="(blog,index) in blogList "
                      :class="'square-item-detail  animate__animated animate__fadeInLeft animate__delay-'+((index+1)%20)+'s'">
-                    <a :href="'/detail/'+blog.id" :title="blog.title" target="_blank" style="color: #fff">
+                    <a :href="'/detail/'+blog.id" :title="blog.title" style="color: #fff">
                         <div class="square-item-wrapper"
                              :style="'background: url('+blog.img+') 0% 0% / 100% 100%;'"></div>
                     </a>

@@ -70,6 +70,7 @@ public class LoginController {
     @ResponseBody
     @PostMapping("/logined")
     public String logined(@RequestBody UserVo userVo, HttpSession session) {
+        System.out.println("进入到方法了哦");
         //1: 根据账号去查询用户信息
         LambdaQueryWrapper<User> lambdaQueryWrapper = new LambdaQueryWrapper<>();
         lambdaQueryWrapper.eq(User::getTelephone, userVo.getAccount());

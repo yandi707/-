@@ -3,8 +3,8 @@ var vue = new Vue({
     data:{
         title:"MoMo登录",
         user:{
-            account:"10000",
-            password:"123456",
+            account:"123456467",
+            password:"1111",
             code:""
         }
     },
