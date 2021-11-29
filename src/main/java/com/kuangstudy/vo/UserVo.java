@@ -1,4 +1,4 @@
-package com.kuangstudy;
+package com.kuangstudy.vo;
 
 import lombok.Data;
 

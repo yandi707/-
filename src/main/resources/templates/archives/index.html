@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <title> 愤怒的泡面</title>
+    <meta name="description" content="A Blog Powered By Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/prontera.css">
+</head>
+
+<body>
+
+<div id="app">
+    <header class="feature-header">
+        <nav class="component-nav">
+            <ul>
+                <div class="logo-container">
+                    <a href="/">
+                        <h2 class="title">愤怒的泡面</h2></a>
+                </div>
+                <a href="/" target="_self" class="li component-nav-item">
+                    <p>主页</p>
+                </a>
+                <a href="/archives" target="_self" class="li component-nav-item">
+                    <p>归档</p>
+                </a>
+                <a href="/feedback" target="_self" class="li component-nav-item">
+                    <p>留言板</p>
+                </a>
+                <a href="/about" target="_self" class="li component-nav-item">
+                    <p>关于我</p>
+                </a>
+                <ul class="shortcut-icons">
+                    <a href="https://github.com/AngryPowman" target="_blank"><img src="/images/github.svg" class="icon"></a>
+                    <a href="https://www.zhihu.com/people/AngryPowman" target="_blank"><img src="/images/zhihu.svg"
+                                                                                            class="icon"></a>
+                    <a href="/atom.xml" target="_blank"><img src="/images/rss.svg" class="icon"></a>
+                </ul>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="archive" v-for="(blog,index) in blogs2">
+            <h2 class="archive-year">{{blog.year}}</h2>
+            <div class="post-item" v-for="(article,cindex) in blog.articlesList">
+                <div class="post-info">{{article.createTime}}</div>
+                <a :href="'/detail/'+article.id" :title="article.title" target="_blank" class="post-title-link">{{article.title}}</a>
+            </div>
+        </div>
+    </main>
+
+    <div style="background:red;height: 2px;"  ></div>
+
+    <main class="container">
+        <div class="archive" v-for="(blog,index) in blogs">
+            <h2 class="archive-year">{{blog.year}}</h2>
+            <div class="post-item" v-for="(article,cindex) in blog.articlesList">
+                <div class="post-info">{{article.ctime}}</div>
+                <a :href="'/detail/'+article.id" :title="article.title" target="_blank" class="post-title-link">{{article.title}}</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer-container">
+        <div class="paginator"></div>
+        <div class="copyright">
+            <p>© 2017 - 2021
+                <a href="https://powman.org">AngryPowman</a>, powered by
+                <a href="https://hexo.io/" target="_blank">Hexo</a> and
+                <a href="https://github.com/AngryPowman/hexo-theme-prontera" target="_blank">hexo-theme-prontera</a>.
+            </p>
+        </div>
+    </footer>
+</div>
+<script src="/js/vue.global.js"></script>
+<script src="/js/axios.min.js"></script>
+<script src="/js/archives/index.js"></script>
+</body>
+
+</html>

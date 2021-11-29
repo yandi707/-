@@ -1,11 +1,13 @@
 package com.kuangstudy.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.kuangstudy.UserVo;
+import com.google.code.kaptcha.Constants;
 import com.kuangstudy.config.KConstants;
 import com.kuangstudy.entity.User;
 import com.kuangstudy.service.user.IUserService;
 import com.kuangstudy.utils.pwd.MD5Util;
+import com.kuangstudy.vo.UserVo;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -79,16 +81,25 @@ public class LoginController {
         if (user == null) {
             return "fail";
         }
-        // 3：把用户输入的密码进行加密
+        // 3: 比较验证码？
+        String userinputcode = userVo.getCode();
+        String sessioncode = (String) session.getAttribute(Constants.KAPTCHA_SESSION_KEY);
+        // 4：采用equalsIgnoreCase忽略大小写比较，不论你输入大写还小写还是全大写还全小写都可以，只要值相同都相同
+        boolean codeFlag = userinputcode.equalsIgnoreCase(sessioncode);
+        if (!codeFlag) {
+            // 如果不相同，直接返回
+            return "failcode";
+        }
+        // 5：把用户输入的密码进行加密
         String inputpwd = MD5Util.md5slat(userVo.getPassword());
-        // 4：然后把用户输入的密码进行加密和数据库已经加密的密码进行比较，如果一致，就说明是正确的。
+        // 6：然后把用户输入的密码进行加密和数据库已经加密的密码进行比较，如果一致，就说明是正确的。
         if (user.getPassword().equals(inputpwd)) {
-            // 5: 正确的话，就把登录的用户信息放到session中。
+            // 7: 正确的话，就把登录的用户信息放到session中。
             session.setAttribute(KConstants.SESSION_USER, user);
             return "success";
         }
 
-        // 6：不一致用户密码不存在
+        // 8：不一致用户密码不存在
         return "fail";
     }
 
